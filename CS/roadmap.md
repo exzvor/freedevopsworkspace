@@ -670,6 +670,6 @@ done
 </details>
 
 ### Список литературы
-Таненбаум Э. С., Бос Х. Современные операционные системы.
-Таненбаум Э. С. Архитектура компьютера.
-Operating Systems (three easy pieces) Remzi H., Andrea C.
+- Таненбаум Э. С., Бос Х. Современные операционные системы.
+- Таненбаум Э. С. Архитектура компьютера.
+- Operating Systems (three easy pieces) Remzi H., Andrea C.
