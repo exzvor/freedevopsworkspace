@@ -18,6 +18,6 @@
 Если вы хотите помочь в развитии проекта, становитесь соавтором площадки. Также, если вы заметили ошибки/неточности/опечатки, пишите мне в тг [@exzvor](https://t.me/exzvor) или сразу делайте форк проекта и присылайте пул реквесты.
 
 ### Навигация:
-- *[Общие инженерные компетенции](https://github.com/exzvor/freedevopsworkspace/blob/main/CS/roadmap.md)*
-- *[Linux](https://github.com/exzvor/freedevopsworkspace/blob/main/Linux/roadmap.md)*
+- *[Общие инженерные компетенции](https://github.com/exzvor/freedevopsworkspace/blob/main/CS/intro.md)*
+- *[Linux](https://github.com/exzvor/freedevopsworkspace/blob/main/Linux/intro.md)*
 
