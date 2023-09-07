@@ -17,8 +17,6 @@
 ### Взаимодействие
 Если вы хотите помочь в развитии проекта, становитесь соавтором площадки. Также, если вы заметили ошибки/неточности/опечатки, пишите мне в тг [@exzvor](https://t.me/exzvor) или сразу делайте форк проекта и присылайте пул реквесты.
 
-<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/7b088daf-59c1-4372-959c-5815583d9d8a" id="M~Rs4~bbifnw"></iframe></div>
-
 ### Навигация:
 - *[Общие инженерные компетенции](https://github.com/exzvor/freedevopsworkspace/blob/main/CS/roadmap.md)*
 - *[Linux](https://github.com/exzvor/freedevopsworkspace/blob/main/Linux/roadmap.md)*
