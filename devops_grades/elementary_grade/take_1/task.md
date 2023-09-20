@@ -5,6 +5,6 @@ _Вводная: представим, что у вас есть отдельн�
 
 ### Технологии: Linux, Go, git
 
-[Описание решения](https://github.com/exzvor/freedevopsworkspace/devops_grades/elementary_grade/take_1/description.md)
+[Описание решения](https://github.com/exzvor/freedevopsworkspace/blob/feat/elementary_grade/devops_grades/elementary_grade/take_1/description.md)
 
-[Исходный код](https://github.com/exzvor/freedevopsworkspace/devops_grades/elementary_grade/take_1/main.go)
+[Исходный код](https://github.com/exzvor/freedevopsworkspace/blob/feat/elementary_grade/devops_grades/elementary_grade/take_1/main.go)
