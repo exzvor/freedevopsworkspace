@@ -20,4 +20,3 @@
 ### Навигация:
 - *[Общие инженерные компетенции](https://github.com/exzvor/freedevopsworkspace/blob/main/CS/intro.md)*
 - *[Linux](https://github.com/exzvor/freedevopsworkspace/blob/main/Linux/intro.md)*
-
