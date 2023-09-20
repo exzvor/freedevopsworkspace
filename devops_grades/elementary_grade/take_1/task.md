@@ -5,4 +5,4 @@ _Вводная: представим, что у вас есть отдельн�
 
 [Описание решения](https://github.com/exzvor/freedevopsworkspace/blob/main/devops_grades/elementary_grade/take_1/description.md)
 
-[Исходный код](https://github.com/exzvor/freedevopsworkspace/blob/feat/main/devops_grades/elementary_grade/take_1/main.go)
+[Исходный код](https://github.com/exzvor/freedevopsworkspace/blob/main/devops_grades/elementary_grade/take_1/main.go)
