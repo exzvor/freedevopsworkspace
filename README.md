@@ -14,6 +14,7 @@
 2) Базовый (Junior)
 3) Средний (Junior+, Middle)
 4) Продвинутый (Middle+)
+
 Если вы начинающий инженер, перед тем как приступить к решению задач, рекомендуется начать 
 с общей инженерной подготовки. Подготовка включает в себя знакомство с компьютерными сетями, 
 Linux и выбора языка программирования. Работу на площадке вы также можете начать с [этого раздела](https://github.com/exzvor/freedevopsworkspace/blob/main/CS/intro.md).
@@ -32,5 +33,5 @@ Linux и выбора языка программирования. Работу 
 
 ### Навигация:
 - *[Общие инженерные компетенции](https://github.com/exzvor/freedevopsworkspace/blob/main/CS/intro.md)*
-- *[Элементарный уровень](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade)*
-    - *[Задача 1. Создать свою утилиту `ls`](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_1)*
+- *[Элементарный уровень](https://github.com/exzvor/freedevopsworkspace/main/devops_grades/elementary_grade)*
+    - *[Задача 1. Создать свою утилиту `ls`](https://github.com/exzvor/freedevopsworkspace/main/devops_grades/elementary_grade/take_1)*
