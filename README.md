@@ -32,6 +32,6 @@ Linux и выбора языка программирования. Работу 
 проекта и присылайте пул реквесты.
 
 ### Навигация:
-- *[Общие инженерные компетенции](https://github.com/exzvor/freedevopsworkspace/blob/main/CS/intro.md)*
-- *[Элементарный уровень](https://github.com/exzvor/freedevopsworkspace/main/devops_grades/elementary_grade)*
-    - *[Задача 1. Создать свою утилиту `ls`](https://github.com/exzvor/freedevopsworkspace/main/devops_grades/elementary_grade/take_1)*
+- *[Общие инженерные компетенции](https://github.com/exzvor/freedevopsworkspace/blob/main/tech/CS/intro.md)*
+- *[Элементарный уровень](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade)*
+    - *[Задача 1. Создать свою утилиту `ls`](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_1)*
