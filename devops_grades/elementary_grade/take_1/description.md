@@ -16,6 +16,6 @@
 
 ### Рекомендуемый материал:
 
-- *[что такое Linux, в чем его преимущество. Базовые команды в Linux (`ls`, `cd`, `pwd` и т.д)](https://github.com/exzvor/freedevopsworkspace/blob/main/Linux/intro.md)*
+- *[что такое Linux, в чем его преимущество. Базовые команды в Linux (`ls`, `cd`, `pwd` и т.д)](https://github.com/exzvor/freedevopsworkspace/blob/main/tech/Linux/intro.md)*
 - *основы [Go](https://go.dev/tour/welcome/1), [Java](https://dev.java/learn/getting-started/), [Python](https://www.python.org/about/gettingstarted/) или любого другого языка программирования на ваш выбор (задачу необязательно выполнять именно на Go)*
 - *[контроль версий git. Создаем коммиты и как делать историю изменений проекта понятнее и организованнее](https://github.com/exzvor/freedevopsworkspace/blob/main/tech/git/commit.md)*
