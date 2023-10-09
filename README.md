@@ -1,37 +1,35 @@
-# Предисловие к контенту
+# About the project
 
-## Площадка Free DevOps Workspace - структурированный материал для эффективного погружения в DevOps.
+## Free DevOps Workspace - practical material for effective DevOps immersion.
 
-### Основная идея
-Практика - ключ к глубокому пониманию материала. Материал на этой площадке организован по принципу:
-1) Решение практической задачи
-2) Изучение теории по задаче
-3) Вопросы по пройденной теме
+### Main idea
+Practice is the key to a deep understanding of the material. The material on this site is organized according to the principle:
+1) Solving a practical problem independently
+2) Compare with suggested solution
+3) Learning theory from practice and self-check
 
-### Материал на площадке
-Задачи на площадке разбиты по уровням:
-1) Элементарный (стажер)
-2) Базовый (Junior)
-3) Средний (Junior+, Middle)
-4) Продвинутый (Middle+)
+### Repository content
+The tasks on the repository are broken down by level::
+1) Elementary (trainee)
+2) Base (Junior)
+3) Intermediate (Junior+, Middle)
+4) Advanced (Middle+)
 
-Если вы начинающий инженер, перед тем как приступить к решению задач, рекомендуется начать 
-с общей инженерной подготовки. Подготовка включает в себя знакомство с компьютерными сетями, 
-Linux и выбора языка программирования. Работу на площадке вы также можете начать с [этого раздела](https://github.com/exzvor/freedevopsworkspace/blob/main/tech/CS/intro.md).
+If you are a novice engineer, it is recommended you to start with general engineering training before solving problems. Preparation includes familiarizing with computer networks,
+Linux, and choosing a programming language. By the way you can start [here](https://github.com/exzvor/freedevopsworkspace/blob/main/intro/intro.md) to get familiar with some concepts.
 
-### Как пользоваться?
-Просмотрите ниже навигацию площадки. Выберете нужный уровень и задачу. В папке с задачей в общем случае 
-содержится 4 файла: `task.md` (описание задачи), `description.md` (решение задачи), файл с кодом или скриптом (например `main.go`),
-`question.md` (вопросы для подготовки к собеседованию по пройденной теме). Ссылки на теорию по задаче 
-находятся в файле `description.md`.
+### How to use
+View the repository navigation below. Select the desired level and task. In folder with the take there are `task.md` and `solution.md` in general case.
 
-### Взаимодействие
-Если вы хотите помочь в развитии проекта, становитесь соавтором площадки, 
-создавайте интересные задачи любого уровня и прикрепляйте к ним теоретический материал. 
-Также, если вы заметили ошибки/неточности/опечатки, пишите мне в тг [@exzvor](https://t.me/exzvor) или сразу делайте форк 
-проекта и присылайте пул реквесты.
+### Collaboration
+If you want to help in the development of the project, become a co-author of the workspace,
+create interesting problems of any level and attach theoretical material to them.
+Also, if you notice errors/inaccuracies/typos, write to me in the telegram [@exzvor](https://t.me/exzvor) or make a fork of the project and open a new pull request.
 
-### Навигация:
-- *[Общие инженерные компетенции](https://github.com/exzvor/freedevopsworkspace/blob/main/tech/CS/intro.md)*
-- *[Элементарный уровень](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade)*
-    - *[Задача 1. Создать свою утилиту `ls`](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_1)*
+To keep up with new challenges join our [channel](https://t.me/freedevopsworkspace)
+
+### Navigation:
+- *[General engineering competencies](https://github.com/exzvor/freedevopsworkspace/blob/main/intro/intro.md)*
+- *[Elementary grade](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade)*
+    - *[Take 1. Create your own utility `ls`](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_01)*
+    - *[Take 2. Autorun a program using `systemd`](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_02)*

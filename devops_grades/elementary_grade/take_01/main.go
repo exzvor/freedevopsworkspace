@@ -1,5 +1,5 @@
-//Утилита считывает содержимое каждого указанного каталога и отображает информацию о каждом файле внутри.
-//Эта информация включает в себя имя файла, его размер и мод доступа.
+//The utility reads the contents of each specified directory and displays information about each file inside.
+//This information includes the file name, file size, and access mod.
 
 package main
 
@@ -10,7 +10,7 @@ import (
 	"strconv"
 )
 
-// Функция для считывания директории и вывода файлов внутри неё
+// readDir is for reading a directory and outputting files inside it
 func readDir(directory string) error {
 	fileInfos, err := os.ReadDir(directory)
 	if err != nil {
@@ -25,7 +25,7 @@ func readDir(directory string) error {
 	return nil
 }
 
-// Функция для форматирования информации о файле
+// formatFileInfo is for formatting file information
 func formatFileInfo(fileInfo os.DirEntry) string {
 	info, err := fileInfo.Info()
 	if err != nil {
@@ -40,7 +40,7 @@ func formatFileInfo(fileInfo os.DirEntry) string {
 	return fmt.Sprintf("%s %s %s", fileName, fileSize, fileMode)
 }
 
-// Основная функция, принимающая аргументы командной строки
+// main is accepts command line arguments
 func main() {
 	if len(os.Args) < 2 {
 		fmt.Println("It is necessary to specify directory names")
