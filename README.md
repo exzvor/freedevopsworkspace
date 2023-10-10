@@ -33,3 +33,4 @@ To keep up with new challenges join our [channel](https://t.me/freedevopsworkspa
 - *[Elementary grade](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade)*
     - *[Take 1. Create your own utility `ls`](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_01)*
     - *[Take 2. Autorun a program using `systemd`](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_02)*
+    - *[Take 3. Convert your `JSON` to `CSV`](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_03)*
