@@ -10,7 +10,7 @@ You need to write a script that checks the system memory state every 5 mins. The
 - Do not create log file manually, the file should be created automatically.
 
 ### What to learn:
-- What is [`systemd`](https://systemd.io/) / [`systemctl`](https://www.redhat.com/sysadmin/linux-systemctl-manage-services)
-- Text processing utilities ([`awk`, `sed`, `grep`, `cut`](https://www.baeldung.com/linux/grep-sed-awk-differences))
-- Redirections ([`input`, `output`, `error`](https://www.geeksforgeeks.org/input-output-redirection-in-linux/amp/))
-- Permissions ([`read`, `write`, `execute`](https://www.geeksforgeeks.org/permissions-in-linux/amp/))
+- [What is `systemd`](https://systemd.io/) / [`systemctl`](https://www.redhat.com/sysadmin/linux-systemctl-manage-services)
+- [Text processing utilities (`awk`, `sed`, `grep`, `cut`)](https://www.baeldung.com/linux/grep-sed-awk-differences))
+- [Redirections (`input`, `output`, `error`)](https://www.geeksforgeeks.org/input-output-redirection-in-linux/amp/))
+- [Permissions (`read`, `write`, `execute`)](https://www.geeksforgeeks.org/permissions-in-linux/amp/))
