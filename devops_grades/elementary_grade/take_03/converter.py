@@ -3,7 +3,7 @@ import csv
 
 # open json for reading
 with open('data.json', 'r') as json_file:
-    # Загружаем JSON-данные
+    # download json
     data = json.load(json_file)
 
 # open csv for write

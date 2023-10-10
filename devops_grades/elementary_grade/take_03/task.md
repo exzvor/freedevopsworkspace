@@ -1,4 +1,5 @@
 ## Convert your `JSON` to `CSV`
+You have received `json` data to send to the server, but you are curious, what if convert it to `csv` and send it to the server in this form?
 
 ### Objectives:
 1) Get a `.json` file on your server.
