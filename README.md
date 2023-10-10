@@ -1,6 +1,6 @@
 # About the project
 
-## Free DevOps Workspace - practical material for effective DevOps immersion.
+## Free DevOps Workspace - practical material for effective DevOps immersion
 
 ### Main idea
 Practice is the key to a deep understanding of the material. The material on this site is organized according to the principle:
