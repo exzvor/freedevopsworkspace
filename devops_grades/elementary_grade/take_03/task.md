@@ -17,3 +17,4 @@ In addition, let's create a table with customers in `postgres` and sort it.
 ### What to learn:
 - [More about `scp`](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/)
 - [Postgres tutorial](https://www.postgresqltutorial.com/)
+- [Sort data in SQL](https://www.w3schools.com/sql/sql_orderby.asp)
