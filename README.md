@@ -24,7 +24,7 @@ View the repository navigation below. Select the desired level and task. In fold
 ### Collaboration
 If you want to help in the development of the project, become a co-author of the workspace,
 create interesting problems of any level and attach theoretical material to them.
-Also, if you notice errors/inaccuracies/typos, write to me in the telegram [@exzvor](https://t.me/exzvor) or make a fork of the project and open a new pull request.
+Also, if you notice errors/inaccuracies/typos, write to me in the telegram [@exzvor](https://t.me/exzvor) or make a fork of the project and create a pull request.
 
 To keep up with new challenges join our [channel](https://t.me/freedevopsworkspace)
 
