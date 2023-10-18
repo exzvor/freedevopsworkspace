@@ -1,5 +1,5 @@
 ## Create new users in your system, add them to a group and assign access rights.
-You need to create multiple users, add them to groups, and separate access rights for the confidential directory and fileYou need to create multiple users, add them to groups, and separate access rights for the confidential directory and fileYou need to create multiple users, add them to groups, and separate access rights for the confidential directory and file.
+You need to create multiple users, add them to groups, and separate access rights for the confidential directory and file.
 
 ### Objectives:
 1) Create the next users: `ceo`, `lead`, `developer`, `devops`, `client`, `noname`.
