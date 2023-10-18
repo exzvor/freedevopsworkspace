@@ -1,0 +1,11 @@
+[Unit]
+Description=Memory check
+After=network.target
+
+[Service]
+Type=simple
+ ExecStart=/home/user/memory_check.sh
+User=user
+
+[Install]
+WantedBy=multi-user.target

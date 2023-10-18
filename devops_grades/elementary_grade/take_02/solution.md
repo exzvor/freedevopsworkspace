@@ -1,47 +1,10 @@
 ## Autorun a program using ```systemd```
 
-1) Create `memory_check.sh` script
-```bash
-#!/bin/bash
-
-log_file=/home/user/memory_check.log #specify absolute path otherwise permission errors may occur
-
-if [ ! -f "$log_file" ]; then
-    touch "$log_file"
-fi
-
-while true; do
-timestamp=$(date +"%Y-%m-%d %T")
-
-    memory_info=$(free -h | grep Mem)
-
-    total_memory=$(echo $memory_info | awk '{print $2}')
-    used_memory=$(echo $memory_info | awk '{print $3}')
-    free_memory=$(echo $memory_info | awk '{print $4}')
-    cached_memory=$(echo $memory_info | awk '{print $7}')
-
-    echo "[$timestamp] Total Memory: $total_memory, Used Memory: $used_memory, Free Memory: $free_memory, Cashed Memory: $cached_memory" >> "$log_file"
-    sleep 300 #5mins
-
-done
-```
+1) Create `memory_check.sh` script. [Here is an example](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_02/memory_check.sh)
 2) Do not forget to make your script executable
    `sudo chmod 751 /home/user/memory_check.sh`
 3) Move to `/etc/systemd/system` and create `memory_check.service` there
-4) Describe your service
-```yaml
-[Unit]
-Description=Memory check
-After=network.target
-
-[Service]
-Type=simple
-ExecStart=/home/user/memory_check.sh
-User=user
-
-[Install]
-WantedBy=multi-user.target
-```
+4) Describe your service. [Here is an example](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_02/service.yaml)
 5) Reload systemd
    `sudo systemctl daemon-reload`
 6) Enable service
