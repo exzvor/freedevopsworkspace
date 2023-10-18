@@ -1,0 +1,8 @@
+root=youremail@gmail.com
+UseSTARTTLS=YES
+mailhub=smtp.gmail.com:587
+AuthUser=youremail@gmail.com
+AuthPass=yourpass
+hostname=server
+FromLineOverride=YES
+UseTLS=YES
