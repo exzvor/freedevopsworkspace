@@ -9,7 +9,7 @@ Practice is the key to a deep understanding of the material. The material on thi
 3) Learning theory from practice and self-check
 
 ### Repository content
-The tasks on the repository are broken down by level::
+The tasks on the repository are broken down by grades:
 1) Elementary (trainee)
 2) Base (Junior)
 3) Intermediate (Junior+, Middle)
@@ -36,3 +36,4 @@ To keep up with new challenges join our [channel](https://t.me/freedevopsworkspa
     - *[Take 3. Convert your `JSON` to `CSV`. Create data with `postgres`](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_03)*
     - *[Take 4. Create new users in your system, add them to a group and assign access rights](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_04)*
     - *[Take 5. Set up email alerts](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_05)*
+    - *[Take 6. Backup your data](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_06)*
