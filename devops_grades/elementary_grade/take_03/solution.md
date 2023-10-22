@@ -25,4 +25,4 @@
 10. To dump you db edit the `/etc/postgresql/14/main/pg_hba.conf`. Namely, change the authentication method for the "postgres" user to "trust" or "md5". After that, reload Postgres with `sudo systemctl restart postgresql`.
 11. Create `backups` directory in `/tmp` and dump db there:
    - `sudo pg_dump -U postgres -d postgres > /tmp/backups/customers_dump.sql`
-12. Cat `customers_dump.sql` to verify your task is ok. Done!
+12. Cat `customers_dump.sql` to verify your task is ok.

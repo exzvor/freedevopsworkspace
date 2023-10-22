@@ -9,5 +9,4 @@
 5. Check your utility typing `./myls <your_directory>`. The utility should output the contents of the directory in the output order you specified.
 6. In order for your utility to work properly, i.e. so that just type `myls <directory_name>`, the utility must be added to the environment variables.
 7. For that move `myls` to the `/usr/local/bin` environment variable using the command `sudo mv myls /usr/local/bin/`.
-
-Then check the utility operation (try it without arguments, with one or more arguments, with misprints) to verify your task is ok. Done!
+8. Check the utility operation (try it without arguments, with one or more arguments, with misprints) to verify your task is ok.

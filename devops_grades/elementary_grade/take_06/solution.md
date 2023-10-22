@@ -6,4 +6,4 @@
     - `localhost:5432:*:postgres:1234`
 4. Add the task to `crontab` with the command `sudo crontab -e`:
     - `* * * * * /bin/bash /home/user/script.sh > /dev/null 2>&1` // if you need to eliminate the error message in the Cron logs, you can redirect the script output to `/dev/null`
-5. Wait for a minute to check if the backup has been performed. Done!
+5. Wait for a minute to check if the backup has been performed.

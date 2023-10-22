@@ -40,4 +40,4 @@
    - `su lead`
    - `cat report.sh`
    - `./report.sh`
-14. In the same way try to set rights on directory `confidential_files` to verify your task is ok. Done!
+14. In the same way try to set rights on directory `confidential_files` to verify your task is ok.
