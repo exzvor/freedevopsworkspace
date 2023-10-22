@@ -1,4 +1,4 @@
-## Run first app
+## Run nginx app
 
 1. Download Nginx from Docker Hub:
    - `docker pull nginx`

@@ -1,4 +1,4 @@
-## Run first app
+## Run nginx app
 Build a `docker image` that includes the application and the Nginx web server, open `port 80` on startup, and add the container to the system's autostart.
 
 ### Objectives:
