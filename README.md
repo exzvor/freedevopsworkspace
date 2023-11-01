@@ -38,3 +38,4 @@ To keep up with new challenges join our [channel](https://t.me/freedevopsworkspa
     - *[Take 5. Set up email alerts](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_05)*
     - *[Take 6. Backup your data](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_06)*
     - *[Take 7. Run nginx app](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_07)*
+    - *[Take 8. IPTABLES rules](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_08)*

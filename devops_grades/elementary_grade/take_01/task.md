@@ -1,5 +1,5 @@
 ## Create your own utility `ls`
-Your team has a standalone test server on `Ubuntu 22.04`. You have been tasked with developing `ls` utility to individually present data in order of `file name`, `file size` and `permissions`. Write the utility and embed it on your server.
+Your team has a standalone test server. You have been tasked with developing `ls` utility to individually present data in order of `file name`, `file size` and `permissions`. Write the utility and embed it on your server.
 
 ### Objectives:
 1) Write utility on your favorite programming language (I'd recommend `Go`, `Python` or `Java`).
