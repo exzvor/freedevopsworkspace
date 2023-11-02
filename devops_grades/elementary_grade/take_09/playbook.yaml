@@ -1,0 +1,48 @@
+---
+- name: Installing and configuring Nginx
+  hosts: servers
+  become: true
+
+  tasks:
+    - name: Update the package list on CentOS
+      yum:
+        name: '*'
+        state: latest
+
+    - name: Install the EPEL repository on CentOS
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Installing Nginx on CentOS
+      yum:
+        name: nginx
+        state: present
+
+    - name: Run Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: true
+
+    - name: Install firewalld on CentOS
+      yum:
+        name: firewalld
+        state: present
+
+    - name: Start and enable firewalld
+      service:
+        name: firewalld
+        state: started
+        enabled: true
+
+    - name: Open 22, 80 & 443 ports on CentOS
+      firewalld:
+        port: "{{ item }}/tcp"
+        permanent: true
+        state: enabled
+        immediate: true
+      loop:
+        - 22
+        - 80
+        - 443
