@@ -1,4 +1,4 @@
-## Create new users in your system, add them to a group and assign access rights.
+## Create new users in your system
 You need to create multiple users, add them to groups, and separate access rights for the confidential directory and file.
 
 ### Objectives:
