@@ -1,6 +1,6 @@
 ## Simple Ansible
 
-1. In the sshd_config file (`/etc/ssh/sshd_config`) on the remote `server`, ensure that `PasswordAuthentication` is set to yes
+1. In the sshd_config file (`/etc/ssh/sshd_config`) on the remote `server`, ensure that `PasswordAuthentication` and `PubkeyAuthentication` is set to yes
 2. After making changes, restart the SSH service:
    - `sudo systemctl restart sshd`
 3. Switch to `test` machine and generate `ssh` public key:
