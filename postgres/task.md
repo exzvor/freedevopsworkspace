@@ -14,7 +14,7 @@ To start it on your system do the next steps:
  - view all fields in a table: `\d <table_name>`
 
 ### Northwind overview
-![Northwind overview](https://github.com/exzvor/freedevopsworkspace/tree/main/postgres/ERP.jpg)
+![Northwind overview](https://github.com/exzvor/freedevopsworkspace/blob/main/postgres/ERP.jpg)
 
 ### Tasks
 01. List all products.
