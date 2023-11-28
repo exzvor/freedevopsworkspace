@@ -21,9 +21,9 @@ To start it on your system do the next steps:
 02. List product name, category and price
 03. List product package sizes
 04. List product package sizes, remove duplicates from the list.
-05. Find the value of each product in warehouse, price * amount in store.
-06. Rename the calculated attribute as stockvalue.
-07. Find products that are sold in bottles.
-08. Find names of those products, which we have over 100 units in warehouse.
-09. Find names and unit prices of those products, which have unit price higher than 50. Order the Find in alphabetical order by product name.
-10. Find names of employees working in London.
+05. Find the value of each product in warehouse in descended order, price * amount in store.
+06. Find products that are sold in bottles.
+07. Find names of those products, which we have over 100 units in warehouse.
+08. Find names and unit prices of those products, which have unit price higher than 50. Order the Find in alphabetical order by product name.
+09. Find first and last name of employees (as employee) working in London.
+10. Find names of employees working somewhere else than London.
