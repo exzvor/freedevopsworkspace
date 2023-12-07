@@ -18,3 +18,29 @@ SELECT product_name, unit_price FROM products WHERE unit_price > 50 ORDER BY pro
 SELECT CONCAT(first_name, ' ', last_name) as employee FROM employees where city = 'London';
 -- 10
 SELECT CONCAT(first_name, ' ', last_name) as employee FROM employees where city <> 'London';
+-- 11
+SELECT customer_id, address FROM customers WHERE city IN ('Rio de Janeiro', 'México D.F.') AND postal_code BETWEEN '05020' AND '05030';
+-- 12
+SELECT customer_id, address FROM customers WHERE city = 'México D.F.' AND postal_code NOT BETWEEN '05020' AND '05030';
+-- 13
+SELECT order_id, FROM orders WHERE shipped_date IS NULL;
+-- 14
+SELECT employee_id, last_name, first_name FROM employees WHERE reports_to IS NOT NULL ORDER BY last_name ASC;
+-- 15
+SELECT order_id, customer_id, EXTRACT(MONTH FROM order_date) FROM orders WHERE EXTRACT(YEAR FROM order_date) = 1996 ORDER BY EXTRACT(MONTH FROM order_date);
+-- 16
+SELECT first_name, last_name FROM employees WHERE EXTRACT(YEAR FROM hire_date) = 1992;
+-- 17
+SELECT company_name, contact_name FROM customers UNION SELECT company_name, contact_name FROM suppliers ORDER BY company_name;
+-- 18
+SELECT company_name, contact_name, 'Customer' AS Type FROM customers UNION SELECT company_name, contact_name, 'Supplier' AS Type FROM suppliers ORDER BY company_name;
+-- 19
+SELECT order_id, unit_price * quantity AS original_price, (unit_price + 5) * quantity AS increase_euro, (unit_price * 1.05) * quantity AS increase_percentege FROM order_details;
+-- 20
+SELECT product_id, unit_price FROM products ORDER BY unit_price DESC LIMIT 1;
+-- 21
+SELECT product_id, unit_price FROM products WHERE unit_price = (SELECT MIN(unit_price) FROM products);
+-- 22
+SELECT COUNT(product_id), AVG(unit_price) FROM products;
+-- 23
+SELECT COUNT(product_name), category_name FROM products LEFT JOIN categories ON products.category_id = categories.category_id GROUP BY category_name;

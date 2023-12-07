@@ -27,3 +27,16 @@ To start it on your system do the next steps:
 08. Find names and unit prices of those products, which have unit price higher than 50. Order the Find in alphabetical order by product name.
 09. Find first and last name of employees (as employee) working in London.
 10. Find names of employees working somewhere else than London.
+11. Find address information of customers living in Rio de Janeiro or in México D.F. in postal code area (05020-05030).
+12. Find address information of customers living in México D.F. in some other postal code area than (05020-05030).
+13. Find orders, which have not been shipped yet ie. there is no shipped date.
+14. Find names of employees having superior (i.e., employees with a manager). The list should be in ascending order by employee's lastname.
+15. Find orders made in 1996. Order the list by month of orderdate. Show ordernumber, customer id and month number of orderdate.
+16. Find names of employees, who were hired in 1992.
+17. Find names of companies in ascending order. The list should include both supplier names and customer names.
+18. Find names of companies in ascending order. The list should include both supplier names and customer names. There should also be information whether this company is supplier or customer.
+19. Find out how much would value of order 10288 raise, if you raise original unit price with 5 € and at the same time you raise original unit price +5 %.
+20. Find the product having the highest unit price.
+21. Find the product having the lowest unit price.
+22. Find the average unit price and the count of products.
+23. Find the number of products in every product category. The list should have two columns: category name and count of products in this category.
