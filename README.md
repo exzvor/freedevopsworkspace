@@ -41,3 +41,4 @@ To keep up with new challenges join our [channel](https://t.me/freedevopsworkspa
     - *[Take 8. IPTABLES rules](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_08)*
     - *[Take 9. Simple Ansible](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_09)*
     - *[Take 10. Nginx balancer](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_10)*
+    - *[Take 11. Run a simple app](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_11)*

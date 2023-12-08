@@ -11,10 +11,10 @@ import (
 )
 
 const (
-	host     = "172.18.0.2"
+	host     = "postgres_container_ip_address"
 	port     = 5432
 	user     = "postgres"
-	password = "1234"
+	password = "your_password"
 	dbname   = "northwind"
 )
 
@@ -24,10 +24,10 @@ func main() {
 
 	// Add CORS middleware
 	config := cors.DefaultConfig()
-	config.AllowOrigins = []string{"http://51.250.102.45"} // Replace with your actual frontend origin
-	config.AllowMethods = []string{"GET", "POST", "OPTIONS"} // Add OPTIONS method
+	config.AllowOrigins = []string{"http://your_server_ip"}                             // Replace with your actual frontend origin
+	config.AllowMethods = []string{"GET", "POST", "OPTIONS"}                            // Add OPTIONS method
 	config.AllowHeaders = []string{"Origin", "Content-Type", "Accept", "Authorization"} // Add necessary headers
-	config.AllowCredentials = true // Allow credentials
+	config.AllowCredentials = true                                                      // Allow credentials
 	router.Use(cors.New(config))
 
 	// Handle OPTIONS preflight requests

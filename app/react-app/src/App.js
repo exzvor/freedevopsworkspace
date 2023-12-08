@@ -4,19 +4,18 @@ function App() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        // Ваш код для получения данных, например, с использованием fetch
-        fetch('http://51.250.102.45:8080/', {
+        // fetch for receiving data from backend (the port which you specified in backend docker run)
+        fetch('http://your_server_ip_address:8080/', {
             method: 'GET',
             mode: 'cors',
-            credentials: 'include', // Включает отправку куки при кросс-доменных запросах
+            credentials: 'include', // Enables sending a cookie on cross-domain requests
             headers: {
                 'Content-Type': 'application/json',
-                // Другие необходимые заголовки
             },
         })
         .then(response => response.json())
         .then(result => {
-            // Проверяем, что result.data является массивом
+            // Check that result.data is an array
             if (Array.isArray(result.data)) {
                 setData(result.data);
             } else {
@@ -29,7 +28,7 @@ function App() {
     return (
         <div>
             {data.map(item => (
-                // Ваш код для отображения данных
+                // Your code for displaying the data
                 <div key={item.id}>{item.name}</div>
             ))}
         </div>
