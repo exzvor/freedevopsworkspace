@@ -40,3 +40,7 @@ To start it on your system do the next steps:
 21. Find the product having the lowest unit price.
 22. Find the average unit price and the count of products.
 23. Find the number of products in every product category. The list should have two columns: category name and count of products in this category.
+24. Find average, maximum and minimum of quantities in order details for every product. The list should be in descending order by average values.
+25. Like previous, but only for products ordered at least in 50 orders.
+26. Like previous, but only for Beverages category.
+27. Find name of customer, orderid and orderdate for orders 10600 - 10620.

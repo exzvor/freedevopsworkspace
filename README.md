@@ -19,7 +19,7 @@ If you are a novice engineer, it is recommended you to start with general engine
 Linux, and choosing a programming language. By the way you can start [here](https://github.com/exzvor/freedevopsworkspace/blob/main/intro/intro.md) to get familiar with some concepts.
 
 ### How to use
-View the repository navigation below. Select the desired level and task. In folder with the take there are `task.md` and `solution.md` in general case.
+View the repository navigation below. Select the desired level and task. In folder with the take there are `README.md` that contains the task itself and `solution.md` in general case.
 
 ### Collaboration
 If you want to help in the development of the project, become a co-author of the workspace,

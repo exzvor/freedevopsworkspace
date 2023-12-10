@@ -3,14 +3,14 @@
 create three docker containers and make them interact with each other to depict requested data on port 80 of the web server.
 
 ### Objectives:
-1. Create Dockerfile for db. Build and run docker database container on 5432 port.
-2. Create Dockerfile for backend. Build and run docker backend container on 8080 port. 
-3. Create Dockerfile for react-app. Build and run docker react container on 80 port. 
+1. Install only `docker` on your server and download [`northwind` database](https://github.com/exzvor/freedevopsworkspace/blob/main/postgres/northwind.sql) at db directory.
+2. Create `Dockerfile` for db. Build and run docker database container on 5432 port.
+3. Create `Dockerfile` for backend. Build and run docker backend container on 8080 port. 
+4. Create `Dockerfile` for react-app. Build and run docker react container on 80 port. 
 
 ### Restrictions:
 - Dockerfiles are stored in db, backend and react-app directories, please, do not open it until you've solved them yourself! 
 - Use one server, run all three containers right on it.
-- Only `docker` should be installed on server.
 - Do not install locally on server neither `postgres`, nor `golang` nor `react`.
 - Firstly, you should create docker network in order for containers communication.
 - Don't forget about web server. Hint: you can use `nginx` in react app. Describe it in `Dockerfile` stage 2.

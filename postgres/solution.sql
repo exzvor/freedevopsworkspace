@@ -44,3 +44,11 @@ SELECT product_id, unit_price FROM products WHERE unit_price = (SELECT MIN(unit_
 SELECT COUNT(product_id), AVG(unit_price) FROM products;
 -- 23
 SELECT COUNT(product_name), category_name FROM products LEFT JOIN categories ON products.category_id = categories.category_id GROUP BY category_name;
+-- 24
+SELECT product_id, AVG(quantity), MAX(quantity), MIN(quantity) FROM order_details GROUP BY product_id ORDER BY AVG(quantity) DESC;
+-- 25
+SELECT product_id, AVG(quantity), MAX(quantity), MIN(quantity) FROM order_details GROUP BY product_id HAVING COUNT(order_id) >= 50 ORDER BY AVG(quantity) DESC;
+-- 26
+SELECT order_details.product_id, AVG(quantity), MAX(quantity), MIN(quantity) FROM order_details JOIN products ON order_details.product_id = products.product_id JOIN categories ON products.category_id = categories.category_id WHERE category_name = 'Beverages' GROUP BY order_details.product_id HAVING COUNT(order_id) >= 50 ORDER BY AVG(quantity) DESC;
+-- 27
+SELECT customers.contact_name, orders.order_id, orders.order_date FROM customers JOIN orders ON customers.customer_id = orders.customer_id WHERE order_idbetween 10600 AND 10620;
