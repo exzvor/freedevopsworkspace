@@ -52,3 +52,9 @@ SELECT product_id, AVG(quantity), MAX(quantity), MIN(quantity) FROM order_detail
 SELECT order_details.product_id, AVG(quantity), MAX(quantity), MIN(quantity) FROM order_details JOIN products ON order_details.product_id = products.product_id JOIN categories ON products.category_id = categories.category_id WHERE category_name = 'Beverages' GROUP BY order_details.product_id HAVING COUNT(order_id) >= 50 ORDER BY AVG(quantity) DESC;
 -- 27
 SELECT customers.contact_name, orders.order_id, orders.order_date FROM customers JOIN orders ON customers.customer_id = orders.customer_id WHERE order_idbetween 10600 AND 10620;
+-- 28
+SELECT COUNT(product_id), order_details.order_id FROM order_details JOIN orders ON order_details.order_id = orders.order_id WHERE ship_country = 'France' GROUP BY order_details.order_id ORDER BY COUNT(product_id) DESC;
+-- 29
+SELECT orders.order_id, customers.contact_name FROM orders JOIN employees ON orders.employee_id = employees.employee_id JOIN customers ON orders.customer_id = customers.customer_id WHERE concat(employees.first_name, ' ', employees.last_name) = 'Robert King';
+-- 30
+SELECT orders.order_id, COUNT(DISTINCT customers.contact_name) FROM orders JOIN employees ON orders.employee_id = employees.employee_id JOIN customers ON orders.customer_id = customers.customer_id WHERE concat(employees.first_name, ' ', employees.last_name) = 'Robert King' GROUP BY orders.order_id;

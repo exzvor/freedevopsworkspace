@@ -44,3 +44,6 @@ To start it on your system do the next steps:
 25. Like previous, but only for products ordered at least in 50 orders.
 26. Like previous, but only for Beverages category.
 27. Find name of customer, orderid and orderdate for orders 10600 - 10620.
+28. Find the number of products ordered in every order having shipcountry France. List should have two columns: orderid and quantity of products. The list should also be in decending order by quantity of products.
+29. Find the orders handled by employee Robert King. List should include columns orderid and customer's name. The list should be in ascending order by names of customers.
+30. How many different customers Robert King has managed by handling orders?

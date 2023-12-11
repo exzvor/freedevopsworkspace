@@ -199,3 +199,121 @@ This staged approach ensures that the kernel has the required components to reac
 transitioning from the temporary `initramfs` environment to the real root file system, where the full set of system 
 resources and modules become available for the continued boot process.
 </details>
+
+# Networks
+
+<details>
+<summary>Main components of TCP/IP</summary><br>
+
+1. **IP (Internet Protocol)**: Responsible for addressing and routing data packets so that they can travel across networks and arrive at the correct destination.
+2. **TCP (Transmission Control Protocol)**: Provides reliable, connection-oriented communication between devices. It ensures that data is delivered in the correct order and without errors.
+</details>
+
+<details>
+<summary>How does TCP/IP work</summary><br>
+
+TCP/IP works by breaking down data into packets and then using IP to address and route these packets to their destination. 
+TCP ensures that the packets are received in the correct order and without errors, providing reliable communication.
+</details>
+
+<details>
+<summary>Key characteristics of TCP</summary><br>
+
+- **Connection-oriented**: TCP establishes a connection before data is exchanged and ensures that data is delivered reliably.
+- **Error-checking**: TCP includes error-checking mechanisms to ensure the integrity of the data being transmitted.
+- **Flow control**: TCP manages the flow of data between sender and receiver to prevent congestion (the demand for network resources surpasses available capacity).
+</details>
+
+<details>
+<summary>The purpose of DNS in TCP/IP</summary><br>
+
+DNS (Domain Name System) is used in TCP/IP to translate human-readable domain names into IP addresses. 
+This allows users to access websites and other resources using easy-to-remember names instead of numeric 
+IP addresses.
+</details>
+
+<details>
+<summary>How does DHCP work in the TCP/IP context</summary><br>
+
+DHCP (Dynamic Host Configuration Protocol) is used to automatically assign IP addresses to devices on a network. 
+It simplifies the process of network configuration by dynamically allocating IP addresses to devices when they join the network.
+</details>
+
+<details>
+<summary>Subnetting in networking</summary><br>
+
+Subnetting is used to improve network performance, enhance security, and efficiently utilize IP addresses 
+by dividing a large network into smaller, more manageable segments.
+</details>
+
+<details>
+<summary>What is a subnet mask?</summary><br>
+
+A subnet mask is a 32-bit numeric address that divides an IP address into network and host portions. 
+It is used to identify the network and host portions of an IP address.
+</details>
+
+<details>
+<summary>Calculation for the IP addresses with a subnet</summary><br>
+
+`Example: 192.168.1.29/24`. The "/24" in the subnet mask indicates that the first 24 bits are allocated for the network portion, 
+leaving 32 - 24 = 8 bits for host addresses within each subnet. Since it's a /24 subnet, there are 2^8
+= 256 possible host addresses, but 2 addresses are reserved for the network address and the broadcast address. 
+Therefore, there are 256 - 2 = 254 usable host addresses. The usable range of host addresses falls between the network address and the broadcast address.
+
+`Network Address: 192.168.1.0`
+`Usable Range:    192.168.1.1 to 192.168.1.254`
+`Broadcast Addr:  192.168.1.255`
+
+So, in this case, the IP address 192.168.1.29 is part of the subnet 192.168.1.0/24, and it is one of the usable host addresses within that subnet.
+
+_Other example_
+In case of , since it's a /16 subnet, there is only one subnet, and each subnet can have 2^16= 65,536 possible hosts.
+Therefore, there are 65,536 - 2 = 65,534 usable host addresses.
+The IP address 192.168.1.0 is the network address of the subnet 192.168.0.0/16, and the usable range of host
+addresses within this subnet is from 192.168.0.1 to 192.168.255.254.
+
+`Original Network: 192.168.1.0/16`
+
+`Subnet 1: 192.168.1.0/24`
+`Subnet 2: 192.168.2.0/24`
+`Subnet 3: 192.168.3.0/24`
+`Subnet etc.:`
+</details>
+
+<details>
+<summary>The process when a user types "google.com" into a web browser</summary><br>
+
+1. **Local Hosts File:** </br>
+_Protocol Used: N/A (File System)>_
+- Before making a DNS query, the operating system checks the local `.host` file for an entry related to "google.com."
+- If an entry is found in the host file, the associated IP address is used directly, bypassing the DNS resolution process.
+2. **Local DNS Cache:** </br>
+_Protocol Used: DNS (Domain Name System)_
+- Before initiating a DNS resolution request to external DNS servers, the operating system checks its local DNS cache.
+- If the domain name and its corresponding IP address are found in the local DNS cache (due to recent queries or cached entries), the DNS resolution process can be bypassed. The cached IP address is used directly.
+3. **DNS Resolution:** </br>
+_Protocol Used: DNS (Domain Name System)_
+- If the domain name is not found in the local DNS cache or if the cached entry has expired (based on the Time to Live or TTL value), the operating system proceeds with a DNS resolution request.
+- The local DNS resolver sends a query to external DNS servers, such as recursive DNS servers provided by the Internet Service Provider (ISP) or public DNS servers like Google's 8.8.8.8.
+- The external DNS servers may, in turn, consult authoritative DNS servers to obtain the IP address associated with the requested domain.
+4. **TCP/IP Stack and ARP:** </br>
+_Protocols Used: ARP (Address Resolution Protocol), IP (Internet Protocol)_
+- Once the IP address is obtained, the browser initiates a connection to the Google server using the TCP/IP stack.
+- ARP is used to resolve the IP address to the MAC (Media Access Control) address on the local network.
+5. **TCP Handshake:** </br>
+_Protocol Used: TCP (Transmission Control Protocol)_
+- A three-way handshake is performed between the user's device and the Google server to establish a reliable connection.
+- The TCP handshake involves the exchange of SYN (synchronize), SYN-ACK (synchronize-acknowledge), and ACK (acknowledge) packets.
+6. **HTTP/HTTPS Request:** </br>
+_Protocol Used: HTTP (Hypertext Transfer Protocol) or HTTPS (HTTP Secure)_
+- After the TCP connection is established, the browser sends an HTTP or HTTPS request to the Google server.
+- If HTTPS is used, the communication is encrypted using SSL/TLS (Secure Sockets Layer/Transport Layer Security).
+7. **Web Server Response:** </br>
+_Protocol Used: HTTP/HTTPS_
+- The Google web server processes the request and sends back an HTTP or HTTPS response.
+- The response includes the requested web page content, status codes, and additional information.
+8. **Rendering the Web Page:** </br>
+_Used: HTML, JS, CSS_
+- The browser receives the response and renders the web page, displaying text, images, and other content.
+</details>
