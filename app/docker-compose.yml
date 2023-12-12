@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: ./db
+    ports:
+      - "5432:5432"
+    container_name: db
+    env_file: .env
+    networks:
+      - appnetwork
+  app:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      GIN_MODE: release
+    networks:
+      - appnetwork
+  react-app:
+    build:
+      context: ./react-app
+    ports:
+      - "80:80"
+    networks:
+      - appnetwork
+
+networks:
+  appnetwork:
+    driver: bridge

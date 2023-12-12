@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	host     = "postgres_container_ip_address"
+	host     = "postgres_container_ip_address" // or container name "db" (in case of docker compose)
 	port     = 5432
 	user     = "postgres"
 	password = "your_password"

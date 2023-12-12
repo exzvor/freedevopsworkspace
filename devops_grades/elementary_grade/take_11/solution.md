@@ -1,4 +1,4 @@
-## Run a simple app
+## Run a simple app (part 1)
 
 1. Create docker network
    - `docker network create appnetwork`
