@@ -13,6 +13,89 @@ To start it on your system do the next steps:
  - view all relations: `\dt`
  - view all fields in a table: `\d <table_name>`
 
+### Data types in Postgres
+| Category                    | Data Types                                 |
+|-----------------------------|--------------------------------------------|
+| INTEGRAL NUMBERS            | smallint, integer, bigint                  |
+| REAL NUMBERS                | decimal/numeric, real/float4, float8/float |
+| AUTO-INCREMENTING INTEGERS  | smallserial, serial, bigserial             |
+| CHARACTERS                  | char, varchar, text                        |
+| LOGICAL                     | bool                                       |
+| TEMPORAL                    | date, time, timestamp                      |
+| SPECIAL                     | arrays, json, xml, null                    |
+
+### Relationships
+
+**One-to-One Relationship** </br>
+Suppose you have a database with two tables: Authors and AuthorDetails. 
+Each author has a single corresponding record in the AuthorDetails table 
+that contains additional information about the author, such as their biography. </br>
+
+Authors Table
+
+| AuthorID  | AuthorName    |
+|-----------|---------------|
+| 1         | J.K. Rowling  |
+| 2         | George Orwell |
+| 3         | Jane Austen   |
+
+AuthorDetails Table
+
+| AuthorID | Biography                                             |
+|----------|-------------------------------------------------------|
+| 1        | British author best known for the Harry Potter series |
+| 2        | English novelist and essayist, known for 1984         |
+| 3        | English novelist known for Pride and Prejudice        |
+
+**One-to-Many Relationship** </br>
+Consider a scenario where each author can write multiple books, 
+but each book is written by only one author. </br>
+
+Authors Table
+
+| AuthorID   | AuthorName    |
+|------------|---------------|
+| 1          | J.K. Rowling  |
+| 2          | George Orwell |
+| 3          | Jane Austen   |
+
+Books Table
+
+| BookID  | Title               | AuthorID |
+|---------|---------------------|----------|
+| 101     | Harry Potter        | 1        |
+| 102     | 1984                | 2        |
+| 103     | Pride and Prejudice | 3        |
+
+**Many-to-Many Relationship** </br>
+In a scenario where authors can collaborate on multiple books, 
+and a book can have multiple authors. </br>
+
+Authors Table
+
+| AuthorID  | AuthorName     |
+|-----------|----------------|
+| 1         | J.K. Rowling   |
+| 2         | George Orwell  |
+| 3         | Jane Austen    |
+
+Books Table
+
+| BookID | Title               |
+|--------|---------------------|
+| 101    | Harry Potter        |
+| 102    | 1984                |
+| 103    | Pride and Prejudice |
+
+AuthorBooks Table (Intermediate Table)
+
+| AuthorID | BookID  |
+|----------|---------|
+| 1        | 101     |
+| 1        | 102     |
+| 2        | 102     |
+| 3        | 103     |
+
 ### Northwind overview
 ![Northwind overview](https://github.com/exzvor/freedevopsworkspace/blob/main/postgres/ERP.jpg)
 
@@ -47,3 +130,5 @@ To start it on your system do the next steps:
 28. Find the number of products ordered in every order having shipcountry France. List should have two columns: orderid and quantity of products. The list should also be in decending order by quantity of products.
 29. Find the orders handled by employee Robert King. List should include columns orderid and customer's name. The list should be in ascending order by names of customers.
 30. How many different customers Robert King has managed by handling orders?
+31. Find the customers whose orders Robert King has managed at least three times.
+32. Find the suppliers of every product. The list should have two columns: Supplier name and Product name. The list should also be in ascending order by supplier name.

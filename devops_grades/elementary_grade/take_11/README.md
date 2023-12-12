@@ -1,5 +1,5 @@
 ## Run a simple app (part 1)
-[Here is and example](https://github.com/exzvor/freedevopsworkspace/tree/main/app) of simple app to run. There are database as db, backend in golang and frontend in react. Your task is to 
+[Here is an example](https://github.com/exzvor/freedevopsworkspace/tree/main/app) of simple app to run. There are database as db, backend in golang and frontend in react. Your task is to 
 create three docker containers and make them interact with each other to depict requested data on port 80 of the web server.
 
 ### Objectives:

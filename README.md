@@ -29,7 +29,8 @@ Also, if you notice errors/inaccuracies/typos, write to me in the telegram [@exz
 To keep up with new challenges join our [channel](https://t.me/freedevopsworkspace)
 
 ### Navigation:
-- *[General engineering competencies](https://github.com/exzvor/freedevopsworkspace/blob/main/intro/README.md)*
+- *[General engineering competencies](https://github.com/exzvor/freedevopsworkspace/blob/main/intro)*
+- *[SQL practice (Postgres)](https://github.com/exzvor/freedevopsworkspace/tree/main/postgres)*
 - *[Elementary grade](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade)*
     - *[Take 1. Create your own utility ls](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_01)*
     - *[Take 2. Autorun a program using systemd](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_02)*

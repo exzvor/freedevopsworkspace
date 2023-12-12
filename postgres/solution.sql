@@ -58,3 +58,7 @@ SELECT COUNT(product_id), order_details.order_id FROM order_details JOIN orders 
 SELECT orders.order_id, customers.contact_name FROM orders JOIN employees ON orders.employee_id = employees.employee_id JOIN customers ON orders.customer_id = customers.customer_id WHERE concat(employees.first_name, ' ', employees.last_name) = 'Robert King';
 -- 30
 SELECT orders.order_id, COUNT(DISTINCT customers.contact_name) FROM orders JOIN employees ON orders.employee_id = employees.employee_id JOIN customers ON orders.customer_id = customers.customer_id WHERE concat(employees.first_name, ' ', employees.last_name) = 'Robert King' GROUP BY orders.order_id;
+-- 31
+SELECT COUNT(orders.order_id), customers.contact_name FROM orders JOIN employees ON orders.employee_id = employees.employee_id JOIN customers ON orders.customer_id = customers.customer_id WHERE concat(employees.first_name, ' ', employees.last_name) = 'Robert King' GROUP by customers.contact_name HAVING COUNT(orders.order_id) >= 3;
+-- 32
+SELECT product_name, suppliers.contact_name FROM products JOIN suppliers ON products.supplier_id = suppliers.supplier_id ORDER BY suppliers.contact_name ASC;
