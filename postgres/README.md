@@ -96,6 +96,114 @@ AuthorBooks Table (Intermediate Table)
 | 2        | 102     |
 | 3        | 103     |
 
+### PostgreSQL Commands Cheat Sheet
+
+- SELECT DISTINCT (unique values):
+```sql
+SELECT DISTINCT country FROM table;
+```
+- COUNT:
+```sql
+SELECT COUNT(*) FROM table;
+```
+- WHERE:
+```sql
+SELECT price FROM table WHERE weight >= 20 AND weight <= 40;
+```
+- AND, OR:
+```sql
+SELECT product FROM table WHERE country = 'Mexico' OR country = 'Germany';
+```
+- BETWEEN:
+```sql
+SELECT price FROM table WHERE weight BETWEEN 20 AND 40;
+```
+- IN / NOT IN:
+```sql
+SELECT product FROM table WHERE country IN ('Mexico', 'Germany');
+```
+- = (Equal):
+```sql
+SELECT product FROM table WHERE country = 'Mexico';
+```
+- ORDER BY (ASC, DESC):
+```sql
+SELECT column FROM table ORDER BY column DESC;
+```
+- MIN / MAX / AVG:
+```sql
+SELECT MIN(order_date) FROM table;
+```
+- SUM:
+```sql
+SELECT SUM(column) FROM table;
+```
+- LIKE / NOT LIKE:
+```sql
+SELECT last_name, first_name FROM employees WHERE last_name LIKE 'B%';
+```
+- LIMIT:
+```sql
+SELECT * FROM table LIMIT 10;
+```
+- IS NULL:
+```sql
+SELECT column FROM table WHERE column IS NULL;
+```
+- IS NOT NULL:
+```sql
+SELECT column FROM table WHERE column IS NOT NULL;
+```
+- GROUP BY:
+```sql
+SELECT column, COUNT(*), AVG(column) FROM table GROUP BY column;
+```
+- HAVING (postfilter):
+```sql
+SELECT column, COUNT(*) FROM table GROUP BY column HAVING COUNT(*) > 1;
+```
+- UNION (ALL):
+```sql
+SELECT column FROM table1 UNION ALL SELECT column FROM table2;
+```
+- INTERSECT:
+```sql
+SELECT column FROM table1 INTERSECT SELECT column FROM table2;
+```
+- EXCEPT (ALL):
+```sql
+SELECT column FROM table1 EXCEPT ALL SELECT column FROM table2;
+```
+- INNER/LEFT/RIGHT JOIN:
+```sql
+SELECT * FROM table1 INNER JOIN table2 ON table1.id = table2.id;
+```
+- USING Clause in JOIN:
+```sql
+SELECT * FROM table1 JOIN table2 USING (common_column);
+```
+- Extended JOIN Example:
+```sql
+SELECT contact_name, company_name, phone, first_name, last_name, title,
+order_date, product_name, ship_country, products.unit_price, quantity, discount
+FROM orders
+JOIN order_details USING(order_id)
+JOIN products USING (product_id)
+JOIN customers USING (customer_id)
+JOIN employees USING (employee_id)
+WHERE ship_country = 'USA';
+```
+- Complex JOIN with GROUP BY and HAVING:
+```sql
+SELECT category_name, SUM(unit_price * units_in_stock)
+FROM products
+INNER JOIN categories ON products.category_id = categories.category_id
+WHERE discontinued <> 1
+GROUP BY category_name
+HAVING SUM(unit_price * units_in_stock) > 5000
+ORDER BY SUM(unit_price * units_in_stock) DESC;
+```
+
 ### Northwind overview
 ![Northwind overview](https://github.com/exzvor/freedevopsworkspace/blob/main/postgres/ERP.jpg)
 
