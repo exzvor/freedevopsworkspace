@@ -62,3 +62,5 @@ SELECT orders.order_id, COUNT(DISTINCT customers.contact_name) FROM orders JOIN 
 SELECT COUNT(orders.order_id), customers.contact_name FROM orders JOIN employees ON orders.employee_id = employees.employee_id JOIN customers ON orders.customer_id = customers.customer_id WHERE concat(employees.first_name, ' ', employees.last_name) = 'Robert King' GROUP by customers.contact_name HAVING COUNT(orders.order_id) >= 3;
 -- 32
 SELECT product_name, suppliers.contact_name FROM products JOIN suppliers ON products.supplier_id = suppliers.supplier_id ORDER BY suppliers.contact_name ASC;
+-- 33
+SELECT CONCAT(first_name, ' ', last_name) AS name, EXTRACT(YEAR FROM CURRENT_DATE) - EXTRACT(YEAR FROM birth_date) AS age FROM employees;

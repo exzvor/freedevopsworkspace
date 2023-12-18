@@ -51,20 +51,6 @@ the specific requirements of the application, balancing the need for isolation w
 </details>
 
 <details>
-<summary>Kernel mode and User mode</summary><br>
-
-1. **Kernel mode**
-    - Also known as privileged mode or supervisor mode.
-    - In kernel mode, the CPU has unrestricted access to all resources and can execute any instruction.
-    - The kernel, which is the core part of the operating system, runs in kernel mode. It has the highest level of privilege and can execute privileged instructions.
-    - Kernel mode is reserved for tasks that require direct access to hardware or sensitive system resources. These tasks include device driver operations, memory management, and interrupt handling.
-2. **User mode**
-    - In user mode, the CPU has restricted access to resources, and certain instructions or operations that could potentially harm the system are not allowed.
-    - User mode is where user applications and processes run. These applications do not have direct access to hardware and must request the kernel to perform privileged operations on their behalf through system calls.
-    - Most of the software you interact with, such as text editors, web browsers, and games, run in user mode.
-</details>
-
-<details>
 <summary>The states of processes in htop command</summary><br>
 
 1. **S - Sleeping**. The process is currently sleeping. It is not using the CPU and is in a waiting state. This could be due to waiting for an event, I/O operation, or a specific condition to be met.
@@ -190,7 +176,6 @@ it has become a standard component in many Linux distributions, offering enhance
 <details>
 <summary>Staged Module Loading in Linux Boot Process with initramfs</summary><br>
 
-
 During the Linux boot process with an initial ramdisk `initramfs`, the kernel loads a minimal set of essential 
 modules from the `initramfs`, allowing it to access and mount the real root file system. This initial set of modules 
 typically includes storage drivers and basic hardware support. Once the real root is mounted, the kernel can dynamically 
@@ -200,7 +185,48 @@ transitioning from the temporary `initramfs` environment to the real root file s
 resources and modules become available for the continued boot process.
 </details>
 
+<details>
+<summary>cgroups in Linux</summary><br>
+
+Control Groups (`cgroups`) in Linux are a kernel feature designed to manage and allocate system resources, 
+such as CPU, memory, and I/O, among different processes. They serve a crucial role in scenarios where 
+resource control, prioritization, and isolation are essential, such as in multi-tenant environments. 
+By organizing processes into `cgroups`, administrators can ensure fair resource distribution and prevent 
+one set of processes from negatively impacting others. To inspect `cgroups`, you can navigate the `cgroups` 
+filesystem, usually mounted at `/sys/fs/cgroup`, using commands like ls. The `systemd-cgls` command provides 
+a hierarchical view of `cgroups` managed by `systemd`, while information about a specific process's `cgroup` 
+association can be found in the `/proc` directory. Overall, `cgroups` are integral for optimizing system 
+performance and resource utilization in diverse computing environments.
+</details>
+
+<details>
+<summary>namespaces in Linux</summary><br>
+
+Namespaces in Linux provide a mechanism for isolating and virtualizing system resources, allowing processes 
+to operate in independent environments. They are crucial for creating lightweight and secure containers. 
+Linux supports various namespaces, including PID (Process ID), IPC (Inter-Process Communication), network, 
+mount, and user namespaces. PID namespaces isolate processes, IPC namespaces provide separate inter-process 
+communication channels, network namespaces enable network isolation, mount namespaces manage filesystem mount 
+points independently, and user namespaces isolate user and group IDs. This isolation is essential for 
+containerization technologies like `Docker` and `Kubernetes`. To examine namespaces, tools like `ip netns` and `lsns` 
+can be used to list network namespaces and display information about other namespaces. In summary, namespaces 
+in Linux facilitate the creation of isolated environments for processes, contributing to the efficiency and 
+security of containerized applications in diverse computing environments.
+</details>
+
 # Networks
+
+<details>
+<summary>TCP/IP layers</summary><br>
+
+
+The TCP/IP model consists of four layers: **the Application Layer**, dealing with high-level protocols 
+like HTTP and FTP; **the Transport Layer**, managing end-to-end communication through protocols such as 
+TCP and UDP; **the Internet Layer**, handling logical addressing and routing with IP; **and the Link Layer**, 
+overseeing physical data transmission through technologies like Ethernet. Together, these layers form 
+a hierarchical framework that enables efficient communication and data exchange across networks, from 
+user applications down to the underlying hardware.
+</details>
 
 <details>
 <summary>Main components of TCP/IP</summary><br>
@@ -222,6 +248,31 @@ TCP ensures that the packets are received in the correct order and without error
 - **Connection-oriented**: TCP establishes a connection before data is exchanged and ensures that data is delivered reliably.
 - **Error-checking**: TCP includes error-checking mechanisms to ensure the integrity of the data being transmitted.
 - **Flow control**: TCP manages the flow of data between sender and receiver to prevent congestion (the demand for network resources surpasses available capacity).
+</details>
+
+<details>
+<summary>TCP vs UDP</summary><br>
+
+The choice between TCP and UDP hinges on the specific requirements of the application. TCP, being connection-oriented, 
+ensures reliable and ordered data delivery, making it suitable for applications prioritizing accuracy and completeness 
+like file transfer and web browsing. On the other hand, UDP, a connectionless protocol, offers speed and lower 
+latency, making it ideal for real-time applications such as online gaming and live streaming where occasional 
+packet loss is acceptable. The decision involves a trade-off between the reliability and overhead of TCP and the 
+speed and efficiency of UDP, with many applications leveraging both protocols based on their distinct strengths 
+to optimize overall performance.
+</details>
+
+<details>
+<summary>Most common protocols for TCP and UDP</summary><br>
+
+1) TCP protocols:
+   - `HTTP (80)` - Hypertext Transfer Protocol for web servers
+   - `HTTPS (443)` - Secure Hypertext Transfer Protocol for secure web connections
+   - `FTP (20, 21)` - File Transfer Protocol for exchanging files between computers on a network
+2) UDP protocols:
+   - `DNS (53)` - Domain Name System for translating names into IP addresses
+   - `DHCP (67, 68)` - Dynamic Host Configuration Protocol for automatic network configuration
+   - `SNMP (161, 162)` - Simple Network Management Protocol for monitoring and managing network devices
 </details>
 
 <details>

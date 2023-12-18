@@ -240,3 +240,4 @@ ORDER BY SUM(unit_price * units_in_stock) DESC;
 30. How many different customers Robert King has managed by handling orders?
 31. Find the customers whose orders Robert King has managed at least three times.
 32. Find the suppliers of every product. The list should have two columns: Supplier name and Product name. The list should also be in ascending order by supplier name.
+33. Find names and ages of employees. Calculate the age approximately by substracting year of birth and current year. Name the employee age columns to age.
