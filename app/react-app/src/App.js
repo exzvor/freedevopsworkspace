@@ -5,7 +5,8 @@ function App() {
 
     useEffect(() => {
         // fetch for receiving data from backend (the port which you specified in backend docker run)
-        fetch('http://your_server_ip_address:8080/', {
+        console.log(process.env.REACT_APP_IP);
+        fetch(`http://${process.env.REACT_APP_IP}:8080/`, {
             method: 'GET',
             mode: 'cors',
             credentials: 'include', // Enables sending a cookie on cross-domain requests
@@ -13,16 +14,16 @@ function App() {
                 'Content-Type': 'application/json',
             },
         })
-        .then(response => response.json())
-        .then(result => {
-            // Check that result.data is an array
-            if (Array.isArray(result.data)) {
-                setData(result.data);
-            } else {
-                console.error('Data is not an array:', result.data);
-            }
-        })
-        .catch(error => console.error('Error fetching data:', error));
+            .then(response => response.json())
+            .then(result => {
+                // Check that result.data is an array
+                if (Array.isArray(result.data)) {
+                    setData(result.data);
+                } else {
+                    console.error('Data is not an array:', result.data);
+                }
+            })
+            .catch(error => console.error('Error fetching data:', error));
     }, []);
 
     return (

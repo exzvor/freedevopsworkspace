@@ -7,9 +7,11 @@ services:
     ports:
       - "5432:5432"
     container_name: db
-    env_file: .env
+    env_file:
+      - .env
     networks:
       - appnetwork
+
   app:
     build:
       context: ./backend
@@ -19,13 +21,25 @@ services:
       - db
     environment:
       GIN_MODE: release
+    env_file:
+      - .env
     networks:
       - appnetwork
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 15s
+      timeout: 30s
+      retries: 3
+
   react-app:
     build:
       context: ./react-app
     ports:
       - "80:80"
+    depends_on:
+      - app
+    env_file:
+      - .env
     networks:
       - appnetwork
 
