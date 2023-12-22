@@ -1,0 +1,11 @@
+stages:
+  - test
+
+test-job:
+  stage: test
+  tags:
+    - app
+  script:
+    - docker-compose down
+    - docker-compose build
+    - docker-compose up -d

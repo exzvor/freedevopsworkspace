@@ -7,7 +7,7 @@ create `docker-compose.yml` to start a service consisting of three containers (t
 
 ### Restrictions:
 - `docker-compose.yml` should be built on the basis of three containers (`db`, `app`, `react-app`)
-- Postgres environment should be kept in `.env` file
+- Environment should be kept in `.env` file
 
 ### What to learn:
 - [Try Docker Compose](https://docs.docker.com/compose/gettingstarted/)

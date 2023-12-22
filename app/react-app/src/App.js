@@ -5,8 +5,7 @@ function App() {
 
     useEffect(() => {
         // fetch for receiving data from backend (the port which you specified in backend docker run)
-        console.log(process.env.REACT_APP_IP);
-        fetch(`http://${process.env.REACT_APP_IP}:8080/`, {
+        fetch('http://your_server_ip:8080/', {
             method: 'GET',
             mode: 'cors',
             credentials: 'include', // Enables sending a cookie on cross-domain requests
