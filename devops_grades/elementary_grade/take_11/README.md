@@ -1,6 +1,8 @@
 ## Run a simple app (part 1)
-[Here is an example](https://github.com/exzvor/freedevopsworkspace/tree/main/app) of simple app to run. There are database as db, backend in golang and frontend in react. Your task is to 
-create three docker containers and make them interact with each other to depict requested data on port 80 of the web server.
+[Here is an example](https://github.com/exzvor/freedevopsworkspace/tree/main/app) of simple app to run.
+Your task is to create three Docker containers representing the database (named db), the Golang backend, 
+and the React frontend, and configure them to interact with each other 
+to display the requested data on port 80 of the web server.
 
 ### Objectives:
 1. Install only `docker` on your server and download [`northwind` database](https://github.com/exzvor/freedevopsworkspace/blob/main/postgres/northwind.sql) at db directory.

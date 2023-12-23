@@ -44,3 +44,5 @@ To keep up with new challenges join our [channel](https://t.me/freedevopsworkspa
     - *[Take 10. Nginx balancer](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_10)*
     - *[Take 11. Run a simple app (part 1)](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_11)*
     - *[Take 12. Run a simple app (part 2)](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/elementary_grade/take_12)*
+- *[Base grade](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/base_grade)*
+    - *[Take 1. Meet Gitlab](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/base_grade/take_01)*
