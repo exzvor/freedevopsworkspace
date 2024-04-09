@@ -12,8 +12,6 @@ Practice is the key to a deep understanding of the material. The material on thi
 The tasks on the repository are broken down by grades:
 1) Elementary (trainee)
 2) Base (Junior)
-3) Intermediate (Junior+, Middle)
-4) Advanced (Middle+)
 
 If you are a novice engineer, it is recommended you to start with general engineering training before solving problems. Preparation includes familiarizing with computer networks,
 Linux, and choosing a programming language. By the way you can start [here](https://github.com/exzvor/freedevopsworkspace/blob/main/intro/intro.md) to get familiar with some concepts.
