@@ -21,6 +21,9 @@ Linux, and choosing a programming language. By the way you can start [here](http
 ### How to use
 View the repository navigation below. Select the desired level and task. In folder with the take there are `README.md` that contains the task itself and `solution.md` in general case.
 
+### UPD
+Previously, the project aimed to provide a detailed guide for engineers at all levels. However, it has been recognized that for mid-level and senior engineers, and even for juniors, detailed instructions are not as relevant. They primarily need to understand the logic behind actions. Consequently, future tasks will be presented in the form of a manual, outlining key steps and commands.
+
 ### Collaboration
 If you want to help in the development of the project, become a co-author of the workspace,
 create interesting problems of any level and attach theoretical material to them.
@@ -47,3 +50,5 @@ To keep up with new challenges join our [channel](https://t.me/freedevopsworkspa
 - *[Base grade](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/base_grade)*
     - *[Take 1. Meet Gitlab](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/base_grade/take_01)*
     - *[Take 2. Unstoppable process](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/base_grade/take_02)*
+- *[Manual](https://github.com/exzvor/freedevopsworkspace/tree/main/manual)*
+    - *[GlusterFS](https://github.com/exzvor/freedevopsworkspace/tree/main/manual/glusterfs.md)*
