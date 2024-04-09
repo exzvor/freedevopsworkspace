@@ -50,3 +50,4 @@ To keep up with new challenges join our [channel](https://t.me/freedevopsworkspa
     - *[Take 2. Unstoppable process](https://github.com/exzvor/freedevopsworkspace/tree/main/devops_grades/base_grade/take_02)*
 - *[Manual](https://github.com/exzvor/freedevopsworkspace/tree/main/manual)*
     - *[GlusterFS](https://github.com/exzvor/freedevopsworkspace/tree/main/manual/glusterfs.md)*
+    - *[Ansible](https://github.com/exzvor/freedevopsworkspace/tree/main/manual/ansible.md)*
