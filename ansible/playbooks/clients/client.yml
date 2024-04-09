@@ -1,0 +1,43 @@
+- name: Start minervakms with docker
+  gather_facts: yes
+  become: yes
+  vars_files:
+    - /opt/ansible/vault/clients/client.yml
+  vars:
+
+    # Set name client
+    - name: unicredit
+
+    # Domain name without https 
+    - domain_name: unicredit.minervasoft.ru
+
+    # Set brand ( 'naumen' or 'minerva' )
+    - window_brand: 'minerva'
+
+    # Postgresql on docker ? ( 'yes' or 'no' )
+    - postgres_on_docker: 'yes'
+
+    # Ip postgresql server ( if postgres_on_docker == no )
+    - postgres_ip: no
+
+    # Is there LDAP ? ( 'yes' or 'no' )
+    - ldap_service: 'no'
+
+    # Set images versions
+    - ELASTIC_MORPHO_VERSION: 7.11.1.202205.3
+    - MINDISCOVERY_VERSION: 4.14.0
+    - MINCORE_VERSION: 4.21.0
+    - MINCONVERTER_VERSION: 4.16.0
+    - MINSEARCH_VERSION: 4.16.0
+    - MINREPORT_VERSION: 4.21.0
+    - MINFRONTEND_VERSION: RELEASE-4.21.0
+    - MINMIGRATOR_CONFLUENCE_VERSION: 4.17.0
+    # optional
+    #- MINLDAP_VERSION: 3.1.4
+
+  hosts:
+    - unicredit
+  roles:
+    - roles/vpn_client
+    - roles/install-client-new
+    - roles/backups_client

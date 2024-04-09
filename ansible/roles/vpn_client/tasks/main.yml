@@ -1,0 +1,96 @@
+---
+- name: Проверка наличия файла {{ name }} в директории /etc/openvpn/ccd/
+  stat:
+    path: "/etc/openvpn/ccd/{{ name }}"
+  register: ccd_file_info
+  delegate_to: backup.minkms
+
+- name: Запуск скрипта add_ccd.sh
+  shell: /etc/openvpn/clients_conf/add_ccd.sh {{ name }}
+  remote_user: ansible
+  when: ccd_file_info.stat.exists == False
+  delegate_to: backup.minkms
+
+- name: Создание сертификатов OpenVPN
+  expect:
+    command: /etc/openvpn/clients_conf/vpn_add.sh {{ name }}
+    responses:
+      (?i)Enter PEM pass phrase: "minervakms"
+      (?i)Verifying - Enter PEM pass phrase: "minervakms"
+      (?i)Common Name: "{{ name }}"
+      (?i)Type the word: "yes"
+  remote_user: ansible
+  delegate_to: backup.minkms
+
+- name: Only run "update_cache=yes" if the last one is more than 3600 seconds ago
+  ansible.builtin.apt:
+    update_cache: no
+    cache_valid_time: 3600
+
+- name: install packages
+  ansible.builtin.apt:
+    pkg:
+    - systemd-timesyncd
+    - libpq-dev
+    - python3-dev
+    - python3-docker
+    - python3-pip
+    - nginx
+    - htop
+    - certbot
+    - python3-certbot-nginx
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - fail2ban
+    - rsync
+    - sendemail
+    - prometheus-node-exporter
+    - openvpn
+    - gnupg2
+    - software-properties-common
+
+- name: Копирование конфигурационного файла OpenVPN
+  ansible.builtin.fetch:
+    src: "/etc/openvpn/clients_conf/{{ name }}/{{ name }}.ovpn"
+    dest: "/opt/ansible/roles/vpn_client/templates/keys/"
+    flat: true
+  remote_user: ansible
+  delegate_to: backup.minkms
+
+- name: Copy config files
+  template:
+    mode: '0644'
+    src: '{{ item.src }}'
+    dest: '{{ item.dest }}'
+  loop:
+     - { src: '.fail2ban.conf.j2',                   dest: '/etc/fail2ban/fail2ban.conf' }
+     - { src: '.jail.conf.j2',                       dest: '/etc/fail2ban/jail.conf' }
+     - { src: '.auth.txt.j2',                        dest: '/etc/openvpn/client/auth.txt' }
+
+
+- name: Копирование конфигурационного файла OpenVPN на удаленный хост
+  copy:
+    src: "templates/keys/{{ name }}.ovpn"
+    dest: "/etc/openvpn/client.conf"
+    force: yes
+
+- name: restart fail2ban
+  shell: "systemctl restart fail2ban && systemctl enable fail2ban"
+
+- name: time sync
+  shell: 'echo "NTP=94.26.226.178" >> /etc/systemd/timesyncd.conf'
+
+- name: restart time sync
+  shell: "systemctl enable --now systemd-timesyncd.service && systemctl restart systemd-timesyncd.service"
+
+- name: Adding line nameserver 10.100.0.5 in resolv.conf before nameserver
+  blockinfile:
+    path: /etc/resolv.conf
+    marker: ""
+    block: |
+      nameserver 10.100.0.5
+    insertbefore: 'nameserver'
+
+- name: restart openvpn@client
+  shell: "systemctl restart openvpn@client"

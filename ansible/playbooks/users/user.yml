@@ -1,0 +1,22 @@
+---
+- hosts:
+  - '{{ host }}'
+  #remote_user: root
+  become: yes
+  vars:
+    debug_enabled_default: false
+
+    users:
+      - username: v_bezhenar
+        #password: $6$pRNek8aVHdyfatSs$uK.bws35mROOlN8rHztYun3gqF1CwRiuRE69qBq1QOxgvuY4oR72olh0OBZoBu9Y6UAkEqv4Z0AmngpQgKIRl.
+        update_password: on_create
+        shell: /bin/bash
+        ssh_key: |
+          ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9KeC0C68TxMaKCgEg5LhmDhqRnLV9Z6eYvhCyDwpT+YCL7wzs1S8DS1/PfkLqc3s0EWzVQfEokPwlGkZ4tH9uhspeeTvX66y4tcSdj4lXlGXwpTkC281dpSw+c5W7eY+pdlb7ltL/KAb5AlJ0HlyveAidA9eTyOwYJ18NJMqsI9kg9KrCkMIOxcp6MVJ6jwj3Obkp8kovea6Zrye2vdAlNaTju0wJL4yCxfc7eJ+3AtV/1jRHrsKlQq5j6yjaaEal5mMBbF5xEAZ5OYhmplzEofq2Zi4PubJPfTjNVCw9z8wsFXuaeBa7LaLbTC+P6PP1mat0nllSRj8jI0AGU73DbvXU/lgXG0qAxp3k98tmrXzo7ogk3PtH+9nngCusRh6/pyxvTICLnaUqwJUkWaS2xyJaY1V7N0egSHFqP954lkJrLeA3m+HstmbeY/R/RFR4hPyw4mh67ZHjI4atLlRnHjfU+MLaLfkxU2hIjnVprvUNC2+9eGxBz5GQDbEntOsT5qOFOEVQEYOqDFKIuELe9ZSO4tJ5XBFwPxKdLGW6hnW5wHccklzEZ0ZJCB8I7IaJ4IRoQWgjJ+lnE2cHaAwnSnz7NSLTf9VX9KIBrTS3u+tRy5savJPuVNDPwHClz+CGWx7F9soMERQMOXQgqnidH9/sekWbIKmp3hIoim7Uiw== exzvor@victor
+        exclusive_ssh_key: yes
+        use_sudo: yes
+        use_sudo_nopass: yes
+        user_state: present
+
+  roles:
+    - create-users
