@@ -51,3 +51,4 @@ To keep up with new challenges join our [channel](https://t.me/freedevopsworkspa
 - *[Manual](https://github.com/exzvor/freedevopsworkspace/tree/main/manual)*
     - *[GlusterFS](https://github.com/exzvor/freedevopsworkspace/tree/main/manual/glusterfs.md)*
     - *[Ansible](https://github.com/exzvor/freedevopsworkspace/tree/main/manual/ansible.md)*
+    - *[Logstash-Nginx](https://github.com/exzvor/freedevopsworkspace/tree/main/manual/logstash-nginx.md)*
